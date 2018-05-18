@@ -1,0 +1,19 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:queryableListBox="clr-namespace:RanOpt.iBuilding.Common.WpfControl.QueryableListBox;assembly=iBuilding.Common.WpfControl"
+        xmlns:selectableTreeView="clr-namespace:RanOpt.iBuilding.Common.WpfControl.SelectableTreeView;assembly=iBuilding.Common.WpfControl"
+        x:Class="Test.WpfControl.MainWindow"
+        mc:Ignorable="d" Loaded="MainWindow_OnLoaded"
+        Title="MainWindow" Height="500" Width="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        <queryableListBox:QueryableListBoxControl Grid.Column="0" x:Name="StuListBox" QueryWaterMarks="Please input text to query..."/>
+        <selectableTreeView:SelectableTreeView Grid.Column="1" x:Name="StuTreeView" QueryWaterMarks="Please input text to query..."/>
+    </Grid>
+</Window>
