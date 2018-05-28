@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="Test.WpfControl.Views.MeasurementPointScreenControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Test.WpfControl.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="400">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="GridControlResourceDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Row="0" Grid.RowSpan="8" Grid.Column="0" Grid.ColumnSpan="3"/>
+        <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"/>
+        <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"/>
+        <Border Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"/>
+        <Border Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3"/>
+        <Border Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3"/>
+        <Border Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3"/>
+        <Border Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="3"/>
+
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="最小值"/>
+        <TextBlock Grid.Row="0" Grid.Column="2" Text="最大值"/>
+
+        <CheckBox Grid.Row="1" Grid.Column="0" Content="Rx功率范围"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="-120"/>
+        <TextBox Grid.Row="1" Grid.Column="2" Text="-70"/>
+
+        <CheckBox Grid.Row="2" Grid.Column="0" Content="SINR范围"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Text="-20"/>
+        <TextBox Grid.Row="2" Grid.Column="2" Text="50"/>
+
+        <CheckBox Grid.Row="3" Grid.Column="0" Content="距离范围"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Text="2"/>
+        <TextBox Grid.Row="3" Grid.Column="2" Text="2000"/>
+
+        <CheckBox Grid.Row="4" Grid.Column="0" Content="角度范围"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Text="-70"/>
+        <TextBox Grid.Row="4" Grid.Column="2" Text="70"/>
+
+        <CheckBox Grid.Row="5" Grid.Column="0" Content="线性回归阈值"/>
+        <TextBox Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Text="20"/>
+
+        <CheckBox Grid.Row="6" Grid.Column="0" Content="快衰落阈值"/>
+        <TextBox Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Text="40"/>
+
+        <CheckBox Grid.Row="7" Grid.Column="0" Content="地貌"/>
+        <StackPanel Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Vertical">
+            <CheckBox Content="湖泊"/>
+            <CheckBox Content="道路"/>
+            <CheckBox Content="森林"/>
+            <CheckBox Content="草地"/>
+            <CheckBox Content="森林"/>
+            <CheckBox Content="森林"/>
+            <CheckBox Content="森林"/>
+            <CheckBox Content="森林"/>
+            <CheckBox Content="森林"/>
+            <CheckBox Content="森林"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

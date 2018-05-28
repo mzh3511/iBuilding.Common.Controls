@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="Test.WpfControl.Views.PathlossFactorResultControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Test.WpfControl.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="400">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="GridControlResourceDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Margin="1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="80"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Grid.RowSpan="7" Grid.Column="0" Grid.ColumnSpan="4"/>
+        <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"/>
+        <Border Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"/>
+        <Border Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"/>
+        <Border Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3"/>
+        <Border Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3"/>
+        <Border Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3"/>
+        <Border Grid.Row="1" Grid.RowSpan="3" Grid.Column="0"/>
+        <Border Grid.Row="4" Grid.RowSpan="3" Grid.Column="0"/>
+
+        <TextBlock Grid.Row="1" Grid.RowSpan="3" Grid.Column="0" Text="室内" Style="{StaticResource TextBlockRowSpan}"/>
+        <TextBlock Grid.Row="4" Grid.RowSpan="3" Grid.Column="0" Text="室外" Style="{StaticResource TextBlockRowSpan}"/>
+
+        <TextBlock Grid.Row="0" Grid.Column="2" Text="Before"/>
+        <TextBlock Grid.Row="0" Grid.Column="3" Text="After"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="路损常数"/>
+        <TextBox Grid.Row="1" Grid.Column="2" Text="0"/>
+        <TextBox Grid.Row="1" Grid.Column="3" Text="100"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="路损因子"/>
+        <TextBox Grid.Row="2" Grid.Column="2" Text="1.5"/>
+        <TextBox Grid.Row="2" Grid.Column="3" Text="7"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="空气因子"/>
+        <TextBox Grid.Row="3" Grid.Column="2" Text="0" IsEnabled="False"/>
+        <TextBox Grid.Row="3" Grid.Column="3" Text="100" IsEnabled="False"/>
+
+        <TextBlock Grid.Row="4" Grid.Column="1" Text="路损常数"/>
+        <TextBox Grid.Row="4" Grid.Column="2" Text="0"/>
+        <TextBox Grid.Row="4" Grid.Column="3" Text="100"/>
+
+        <TextBlock Grid.Row="5" Grid.Column="1" Text="路损因子"/>
+        <TextBox Grid.Row="5" Grid.Column="2" Text="1.5"/>
+        <TextBox Grid.Row="5" Grid.Column="3" Text="7"/>
+
+        <TextBlock Grid.Row="6" Grid.Column="1" Text="空气因子"/>
+        <TextBox Grid.Row="6" Grid.Column="2" Text="0" IsEnabled="False"/>
+        <TextBox Grid.Row="6" Grid.Column="3" Text="100" IsEnabled="False"/>
+    </Grid>
+</UserControl>
